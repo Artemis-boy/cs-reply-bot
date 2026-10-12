@@ -22,12 +22,26 @@ def normalize(text):
 
 
 def score_faq(question, entry):
-    """Count keyword hits (ID + EN keywords). Returns int score."""
-    q = set(normalize(question).split())
+    """Count keyword hits (ID + EN keywords). Matches whole words or prefixes
+    (e.g. 'promos' hits keyword 'promo'). Returns int score."""
+    qwords = normalize(question).split()
+    q = set(qwords)
     hits = 0
     for kw in entry.get("keywords_id", []) + entry.get("keywords_en", []):
-        kw_words = set(normalize(kw).split())
-        if kw_words and kw_words <= q:
+        kw_words = normalize(kw).split()
+        if not kw_words:
+            continue
+
+        def _hit(k):
+            for w in qwords:
+                if w == k:
+                    return True
+                # prefix match only for tokens >= 4 chars (avoids "do"~"discount")
+                if len(w) >= 4 and len(k) >= 4 and (w.startswith(k) or k.startswith(w)):
+                    return True
+            return False
+
+        if all(_hit(k) for k in kw_words):
             hits += len(kw_words)
     return hits
 
