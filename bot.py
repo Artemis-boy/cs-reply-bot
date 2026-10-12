@@ -60,12 +60,20 @@ def match_faq(question, faq=None, min_score=1):
 
 
 def detect_lang(question):
-    """Naive ID vs EN detection for picking the answer language."""
+    """ID vs EN detection. Indonesian wins on majority ID words, because
+    loanwords like 'cancel'/'promo' appear in Indonesian sentences too."""
+    id_markers = {"yang", "dan", "saya", "anda", "kamu", "bagaimana", "berapa",
+                  "apakah", "bisa", "ada", "di", "ke", "dari", "untuk", "dengan",
+                  "sudah", "belum", "tidak", "ya", "tolong", "mau", "kapan",
+                  "mana", "ini", "itu", "pesanan", "barang", "toko", "batal"}
     en_markers = {"where", "how", "what", "when", "is", "are", "do", "does",
                   "my", "order", "shipping", "return", "refund", "payment",
-                  "track", "cancel", "discount", "store", "open"}
+                  "track", "cancel", "discount", "store", "open", "the", "a"}
     words = set(normalize(question).split())
-    return "en" if words & en_markers else "id"
+    id_hits = len(words & id_markers)
+    en_hits = len(words & en_markers)
+    # tie or no markers -> Indonesian (primary audience)
+    return "en" if en_hits > id_hits else "id"
 
 
 def reply(question, faq=None):
