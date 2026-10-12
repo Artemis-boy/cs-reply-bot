@@ -32,7 +32,7 @@ cs-reply-bot/
 ## Installation
 
 ```bash
-git clone https://github.com/Artemis-pixel/cs-reply-bot.git
+git clone https://github.com/Artemis-boy/cs-reply-bot.git
 cd cs-reply-bot
 pip install openpyxl
 ```
