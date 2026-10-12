@@ -72,7 +72,7 @@ def log_chat(sender, question, answer, faq_id=None, status="ANSWERED"):
 def handle_chat(sender, question):
     """Full pipeline: reply -> ticket if unmatched -> log. Returns answer."""
     from bot import reply
-    answer, faq_id, _lang = reply(question)
+    answer, faq_id = reply(question)
     if faq_id:
         log_chat(sender, question, answer, faq_id, "ANSWERED")
     else:

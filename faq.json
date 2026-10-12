@@ -1,52 +1,32 @@
 [
  {
-  "answer_en": "We ship nationwide within 1-3 business days. Shipping is free for orders over Rp100,000.",
-  "answer_id": "Kami kirim ke seluruh Indonesia dalam 1-3 hari kerja. Gratis ongkir untuk pembelian di atas Rp100.000.",
   "id": "shipping",
-  "keywords_en": [
+  "question": "How much is shipping and how long does it take?",
+  "keywords": [
    "ship",
    "shipping cost",
    "delivery",
    "how long shipping",
    "free shipping"
   ],
-  "keywords_id": [
-   "ongkir",
-   "ongkos kirim",
-   "pengiriman",
-   "berapa lama kirim",
-   "gratis ongkir"
-  ],
-  "question_en": "How much is shipping and how long does it take?",
-  "question_id": "Berapa ongkir dan berapa lama pengiriman?"
+  "answer": "We ship nationwide within 1-3 business days. Shipping is free for orders over Rp100,000."
  },
  {
-  "answer_en": "You can track your order from the link in your confirmation email, or just tell me your order number here.",
-  "answer_id": "Anda bisa lacak pesanan lewat link di email konfirmasi, atau sebutkan nomor pesanan Anda di sini.",
   "id": "tracking",
-  "keywords_en": [
+  "question": "Where is my order?",
+  "keywords": [
    "track order",
    "tracking",
    "where is my order",
    "order status",
    "package location"
   ],
-  "keywords_id": [
-   "lacak pesanan",
-   "tracking",
-   "pesanan saya di mana",
-   "status pesanan",
-   "resi",
-   "nomor resi"
-  ],
-  "question_en": "Where is my order?",
-  "question_id": "Di mana pesanan saya?"
+  "answer": "You can track your order from the link in your confirmation email, or just tell me your order number here."
  },
  {
-  "answer_en": "We accept bank transfer, e-wallets (GoPay, OVO, DANA), QRIS, and credit cards.",
-  "answer_id": "Kami menerima transfer bank, e-wallet (GoPay, OVO, DANA), QRIS, dan kartu kredit.",
   "id": "payment",
-  "keywords_en": [
+  "question": "What payment methods do you accept?",
+  "keywords": [
    "payment",
    "pay",
    "payment method",
@@ -55,85 +35,48 @@
    "qris",
    "credit card"
   ],
-  "keywords_id": [
-   "pembayaran",
-   "bayar",
-   "metode pembayaran",
-   "transfer bank",
-   "e-wallet",
-   "qris",
-   "kartu kredit"
-  ],
-  "question_en": "What payment methods do you accept?",
-  "question_id": "Metode pembayaran apa saja yang diterima?"
+  "answer": "We accept bank transfer, e-wallets (GoPay, OVO, DANA), QRIS, and credit cards."
  },
  {
-  "answer_en": "Yes, items can be returned within 7 days of receipt as long as they are unused and tags are intact. Contact us for a return code.",
-  "answer_id": "Ya, barang bisa dikembalikan dalam 7 hari sejak diterima selama belum dipakai dan label masih menempel. Hubungi kami untuk kode retur.",
   "id": "returns",
-  "keywords_en": [
+  "question": "Can I return or exchange an item?",
+  "keywords": [
    "return",
    "refund",
    "exchange",
-   "wrong item",
-   "damaged"
+   "wrong item"
   ],
-  "keywords_id": [
-   "retur",
-   "refund",
-   "kembalikan",
-   "tukar barang",
-   "barang salah",
-   "barang rusak"
-  ],
-  "question_en": "Can I return or exchange an item?",
-  "question_id": "Apakah barang bisa dikembalikan atau ditukar?"
+  "answer": "Yes, items can be returned within 7 days of receipt as long as they are unused and tags are intact. Contact us for a return code."
  },
  {
-  "answer_en": "Refunds are processed within 3-5 business days after we receive the returned item, back to your original payment method.",
-  "answer_id": "Dana dikembalikan dalam 3-5 hari kerja setelah barang retur kami terima, ke metode pembayaran semula.",
   "id": "refund_time",
-  "keywords_en": [
+  "question": "How long does a refund take?",
+  "keywords": [
    "refund time",
+   "long refund",
+   "refund take",
    "when refund",
    "refund process",
    "money back"
   ],
-  "keywords_id": [
-   "kapan refund",
-   "lama refund",
-   "proses refund",
-   "uang kembali"
-  ],
-  "question_en": "How long does a refund take?",
-  "question_id": "Berapa lama proses refund?"
+  "answer": "Refunds are processed within 3-5 business days after we receive the returned item, back to your original payment method."
  },
  {
-  "answer_en": "Our store hours are Monday to Saturday, 09:00-21:00 WITA. Online chat is answered within 1x24 hours.",
-  "answer_id": "Jam operasional toko Senin-Sabtu, 09.00-21.00 WITA. Chat online dibalas maksimal 1x24 jam.",
   "id": "hours",
-  "keywords_en": [
+  "question": "What are your store hours?",
+  "keywords": [
    "open hours",
    "store hours",
    "what time open",
    "operational hours",
    "customer service hours"
   ],
-  "keywords_id": [
-   "jam buka",
-   "jam operasional",
-   "buka jam berapa",
-   "tutup jam berapa",
-   "jam layanan"
-  ],
-  "question_en": "What are your store hours?",
-  "question_id": "Jam berapa toko buka?"
+  "answer": "Our store hours are Monday to Saturday, 09:00-21:00 WITA. Online chat is answered within 1x24 hours."
  },
  {
-  "answer_en": "Yes! We offer a 10% discount for purchases over Rp500,000 with the code HEMAT10. Promo cannot be combined.",
-  "answer_id": "Ada! Diskon 10% untuk pembelian di atas Rp500.000 dengan kode HEMAT10. Promo tidak bisa digabung.",
   "id": "promo",
-  "keywords_en": [
+  "question": "Are there any promos or discounts?",
+  "keywords": [
    "promo",
    "discount",
    "voucher",
@@ -141,119 +84,64 @@
    "sale",
    "discount code"
   ],
-  "keywords_id": [
-   "promo",
-   "diskon",
-   "voucher",
-   "kupon",
-   "sale",
-   "kode diskon"
-  ],
-  "question_en": "Are there any promos or discounts?",
-  "question_id": "Ada promo atau diskon?"
+  "answer": "Yes! We offer a 10% discount for purchases over Rp500,000 with the code HEMAT10. Promo cannot be combined."
  },
  {
-  "answer_en": "To cancel, reply with your order number before the item ships. Orders already shipped cannot be cancelled but can be returned.",
-  "answer_id": "Untuk membatalkan, balas dengan nomor pesanan Anda sebelum barang dikirim. Pesanan yang sudah dikirim tidak bisa dibatalkan tapi bisa diretur.",
   "id": "cancel",
-  "keywords_en": [
+  "question": "How do I cancel my order?",
+  "keywords": [
    "cancel order",
    "cancel purchase",
    "void order",
    "cancel"
   ],
-  "keywords_id": [
-   "batalkan pesanan",
-   "cancel order",
-   "batal beli",
-   "batal"
-  ],
-  "question_en": "How do I cancel my order?",
-  "question_id": "Bagaimana cara membatalkan pesanan?"
+  "answer": "To cancel, reply with your order number before the item ships. Orders already shipped cannot be cancelled but can be returned."
  },
  {
-  "answer_en": "Product stock shown on the website is live. If the button says 'out of stock', restock usually arrives within 1-2 weeks.",
-  "answer_id": "Stok di website selalu update. Kalau tombol tertulis 'stok habis', biasanya restock dalam 1-2 minggu.",
   "id": "stock",
-  "keywords_en": [
+  "question": "Is this item in stock?",
+  "keywords": [
    "stock",
    "available",
    "out of stock",
    "restock",
    "ready stock"
   ],
-  "keywords_id": [
-   "stok",
-   "ready",
-   "stok habis",
-   "restock",
-   "ready stock",
-   "tersedia"
-  ],
-  "question_en": "Is this item in stock?",
-  "question_id": "Apakah barang ini ready stock?"
+  "answer": "Product stock shown on the website is live. If the button says 'out of stock', restock usually arrives within 1-2 weeks."
  },
  {
-  "answer_en": "If your item arrives damaged or wrong, send us a photo within 2 days and we will resend or refund you in full.",
-  "answer_id": "Jika barang datang rusak atau salah, kirimkan fotonya dalam 2 hari dan kami kirim ulang atau refund penuh.",
   "id": "damaged",
-  "keywords_en": [
+  "question": "My item arrived damaged, what should I do?",
+  "keywords": [
    "damaged",
    "broken",
    "wrong color",
    "wrong size",
    "defective"
   ],
-  "keywords_id": [
-   "rusak",
-   "pecah",
-   "salah warna",
-   "salah ukuran",
-   "cacat"
-  ],
-  "question_en": "My item arrived damaged, what should I do?",
-  "question_id": "Barang saya datang rusak, bagaimana?"
+  "answer": "If your item arrives damaged or wrong, send us a photo within 2 days and we will resend or refund you in full."
  },
  {
-  "answer_en": "Yes, we ship to all cities in Indonesia via JNE, J&T, and SiCepat. Extra fees may apply for remote areas.",
-  "answer_id": "Ya, kami kirim ke seluruh kota di Indonesia via JNE, J&T, dan SiCepat. Area terpencil bisa kena biaya tambahan.",
   "id": "coverage",
-  "keywords_en": [
+  "question": "Do you ship to my city?",
+  "keywords": [
    "ship to",
    "deliver to",
    "coverage area",
    "do you ship"
   ],
-  "keywords_id": [
-   "kirim ke",
-   "apakah kirim",
-   "jangkauan",
-   "luar pulau",
-   "luar kota"
-  ],
-  "question_en": "Do you ship to my city?",
-  "question_id": "Apakah bisa kirim ke kota saya?"
+  "answer": "Yes, we ship to all cities in Indonesia via JNE, J&T, and SiCepat. Extra fees may apply for remote areas."
  },
  {
-  "answer_en": "You can reach a human agent on weekdays 09:00-17:00 WITA. Outside those hours, leave a ticket here and we will follow up.",
-  "answer_id": "Anda bisa hubungi agen manusia di hari kerja 09.00-17.00 WITA. Di luar jam itu, tinggalkan tiket di sini dan kami hubungi kembali.",
   "id": "human",
-  "keywords_en": [
+  "question": "Can I talk to a human agent?",
+  "keywords": [
    "human agent",
    "real person",
    "call center",
    "talk to someone",
    "customer service number"
   ],
-  "keywords_id": [
-   "agen manusia",
-   "orang asli",
-   "call center",
-   "bicara langsung",
-   "nomor cs",
-   "admin"
-  ],
-  "question_en": "Can I talk to a human agent?",
-  "question_id": "Bisa bicara dengan admin langsung?"
+  "answer": "You can reach a human agent on weekdays 09:00-17:00 WITA. Outside those hours, leave a ticket here and we will follow up."
  }
 ]

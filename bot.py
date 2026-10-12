@@ -22,12 +22,12 @@ def normalize(text):
 
 
 def score_faq(question, entry):
-    """Count keyword hits (ID + EN keywords). Matches whole words or prefixes
+    """Count keyword hits. Matches whole words or prefixes
     (e.g. 'promos' hits keyword 'promo'). Returns int score."""
     qwords = normalize(question).split()
     q = set(qwords)
     hits = 0
-    for kw in entry.get("keywords_id", []) + entry.get("keywords_en", []):
+    for kw in entry.get("keywords", []):
         kw_words = normalize(kw).split()
         if not kw_words:
             continue
@@ -59,35 +59,13 @@ def match_faq(question, faq=None, min_score=1):
     return best, best_score
 
 
-def detect_lang(question):
-    """ID vs EN detection. Indonesian wins on majority ID words, because
-    loanwords like 'cancel'/'promo' appear in Indonesian sentences too."""
-    id_markers = {"yang", "dan", "saya", "anda", "kamu", "bagaimana", "berapa",
-                  "apakah", "bisa", "ada", "di", "ke", "dari", "untuk", "dengan",
-                  "sudah", "belum", "tidak", "ya", "tolong", "mau", "kapan",
-                  "mana", "ini", "itu", "pesanan", "barang", "toko", "batal"}
-    en_markers = {"where", "how", "what", "when", "is", "are", "do", "does",
-                  "my", "order", "shipping", "return", "refund", "payment",
-                  "track", "cancel", "discount", "store", "open", "the", "a"}
-    words = set(normalize(question).split())
-    id_hits = len(words & id_markers)
-    en_hits = len(words & en_markers)
-    # tie or no markers -> Indonesian (primary audience)
-    return "en" if en_hits > id_hits else "id"
-
-
 def reply(question, faq=None):
-    """Return (answer_text, faq_id_or_None, lang).
+    """Return (answer_text, faq_id_or_None).
 
     Falls back to a polite ticket message when nothing matches.
     """
     entry, _ = match_faq(question, faq)
-    lang = detect_lang(question)
     if entry:
-        ans = entry.get(f"answer_{lang}") or entry.get("answer_id")
-        return ans, entry.get("id"), lang
-    if lang == "en":
-        return ("Thank you for reaching out! Our team will contact you "
-                "shortly. Your ticket has been recorded."), None, lang
-    return ("Terima kasih sudah menghubungi kami! Tim kami akan segera "
-            "menghubungi Anda. Pertanyaan Anda sudah tercatat sebagai tiket."), None, lang
+        return entry.get("answer"), entry.get("id")
+    return ("Thank you for reaching out! Our team will contact you "
+            "shortly. Your question has been recorded as a ticket."), None

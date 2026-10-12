@@ -1,0 +1,18 @@
+[
+ {
+  "id": "T0001",
+  "sender": "Sari",
+  "question": "Apakah alien jualan di sini?",
+  "status": "CLOSED",
+  "opened_at": "2026-10-12 22:51:05",
+  "closed_at": "2026-10-12 22:51:05"
+ },
+ {
+  "id": "T0002",
+  "sender": "Sari",
+  "question": "Do aliens sell here?",
+  "status": "CLOSED",
+  "opened_at": "2026-10-12 23:39:37",
+  "closed_at": "2026-10-12 23:39:55"
+ }
+]
